@@ -20,6 +20,8 @@
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.2.0",
+    "broccoli-funnel": "^1.0.1",
+    "broccoli-merge-trees": "^1.1.1",
     "ember-ajax": "0.7.1",
     "ember-cli": "2.4.2",
     "ember-cli-app-version": "^1.0.0",
@@ -37,6 +39,10 @@
     "ember-export-application-global": "^1.0.4",
     "ember-load-initializers": "^0.5.0",
     "ember-resolver": "^2.0.3",
-    "loader.js": "^4.0.0"
-  }
+    "express": "^4.13.4",
+    "glob": "^4.5.3",
+    "loader.js": "^4.0.0",
+    "morgan": "^1.7.0"
+  },
+  "dependencies": {}
 }
