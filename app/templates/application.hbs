@@ -3,41 +3,19 @@
 </header>
 
 <div class="album-list">
-  <div class="album">
-    <a class="ember-view" href="/album/1">
-      <img src="images/the-morning-after.jpg">
-    </a>
-    <p class="album-name">The Morning After</p>
-    <p class="album-artist">GOLDHOUSE</p>
-    <p class="song-count">8 songs</p>
-  </div>
-
-  <div class="album">
-    <a class="ember-view" href="/album/1">
-      <img src="images/the-morning-after.jpg">
-    </a>
-    <p class="album-name">The Morning After</p>
-    <p class="album-artist">GOLDHOUSE</p>
-    <p class="song-count">8 songs</p>
-  </div>
-
-  <div class="album">
-    <a class="ember-view" href="/album/1">
-      <img src="images/the-morning-after.jpg">
-    </a>
-    <p class="album-name">The Morning After</p>
-    <p class="album-artist">GOLDHOUSE</p>
-    <p class="song-count">8 songs</p>
-  </div>
-
-  <div class="album">
-    <a class="ember-view" href="/album/1">
-      <img src="images/the-morning-after.jpg">
-    </a>
-    <p class="album-name">The Morning After</p>
-    <p class="album-artist">GOLDHOUSE</p>
-    <p class="song-count">8 songs</p>
-  </div>
+  {{#each model as |album|}}
+    <div class="album">
+      <a class="ember-view" href="{{album.artwork}}">
+        <img src="{{album.artwork}}">
+      </a>
+      <p class="album-name">{{album.name}}</p>
+      <p class="album-artist">{{album.artist}}</p>
+      <p class="song-count">{{songs.length}}</p>
+      {{#if album.isExplicit}}
+        <span class="explicit">EXPLICIT</span>
+      {{/if}}
+    </div>
+  {{/each}}
 </div>
 
 <footer class="ember-view now-playing">
